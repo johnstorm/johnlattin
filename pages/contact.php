@@ -1,19 +1,24 @@
 <div id="contact" class="section">
-    <div class="menu"><a href="contact.html" onclick="return false"><img src="images/contact.png" alt="" /></a></div>
-    <div class="content">
-         <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, nisi a ornare scelerisque, nibh tortor pretium tortor, sed tempus est ipsum sed arcu.</p>
-         <div id="contact_info">
-          <h3>Contact Address</h3>
-          <p>You can can put your address here if you'd like or leave empty if you prefer.</p>
-          <p>Phone: 123456789</p>
-          <p>Mobile: 123456789</p>
-          <p>Fax: 123456789</p>
-          <p>Emal: example@domain.com</p>
-         </div>
-         
-         <div id="contact_form">
-           <h3>Send us an Email</h3>
-           <p id="response"><em>Fields with * are required</em></p>
+	<div class="menu"><a href="contact.html" onclick="return false"><img src="images/contact.png" alt="" /></a></div>
+	<div class="content">
+		<p class="info">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, nisi a ornare scelerisque, nibh tortor pretium tortor, sed tempus est ipsum sed arcu.
+		</p>
+		<div id="contact_info">
+			<h3>Contact Address:</h3>
+			<p>
+				John Lattin
+				26 Fayette St.
+				Apt. 2F
+				Brooklyn, NY 11206
+			</p>
+			<p>Phone: (586) 215-7625</p>
+			<p>Email: john@johnlattin.com</p>
+		</div>
+
+		<div id="contact_form">
+			<h3>Send me an Email</h3>
+			<p id="response"><em>Fields with * are required</em></p>
              
            <form action="" method="post" onsubmit="return false">
                  <p><label for="name">Name*: </label><input id="name" accesskey="1" type="text" name="name" /></p>

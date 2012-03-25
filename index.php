@@ -47,6 +47,7 @@
 <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript" src="lib/pdf.js"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>John Lattin</title>
@@ -54,24 +55,21 @@
 
 <body>
 <div id="wrap">
-  <div id="header">
-    <img id="logo" src="images/logo.png" alt="" />
-    <!--p>
-       <strong>Updates:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, nisi a ornare.
-    </p-->
-  </div>
-  <div id="container">
-     <?php include("pages/contact.php");?>
-	<?php include("pages/portfolio.php");?>
-	<?php include("pages/services.php");?>
-	<?php include("pages/home.php");?>
-  </div>
-  
-  <div id="footer">
-     <p>
-        
-     </p>
-  </div>
+	<div id="header">
+		<img id="logo" src="images/logo.png" alt="" />
+	</div>
+	<div id="container">
+		<?php include("pages/contact.php");?>
+		<?php include("pages/portfolio.php");?>
+		<?php include("pages/resume.php");?>
+		<?php include("pages/home.php");?>
+	</div>
+
+	<div id="footer">
+		<p>
+			Enjoying or disliking my website? Tell me what you think!
+		</p>
+	</div>
 </div>
 
 </body>
