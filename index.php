@@ -56,7 +56,8 @@
 <body>
 <div id="wrap">
 	<div id="header">
-		<img id="logo" src="images/logo.png" alt="" />
+		I need to put something here, thoughts?
+		<!--img id="logo" src="images/logo.png" alt="" /-->
 	</div>
 	<div id="container">
 		<?php include("pages/contact.php");?>

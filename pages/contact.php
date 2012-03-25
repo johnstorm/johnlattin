@@ -1,15 +1,21 @@
 <div id="contact" class="section">
 	<div class="menu"><a href="contact.html" onclick="return false"><img src="images/contact.png" alt="" /></a></div>
 	<div class="content">
-		<p class="info">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, nisi a ornare scelerisque, nibh tortor pretium tortor, sed tempus est ipsum sed arcu.
+		<h1>My Goal</h1>
+		<div class="box" style="width:90%;">
+		<p>
+			I am looking to work full time at a Game Development Studio,
+			if you would like any more information, or to talk to me directly,
+			feel free to contact me and I will get back to you as soon as possible.
 		</p>
+		</div>
+		<br><br><br>
 		<div id="contact_info">
 			<h3>Contact Address:</h3>
 			<p>
-				John Lattin
-				26 Fayette St.
-				Apt. 2F
+				John Lattin<br>
+				26 Fayette St.<br>
+				Apt. 2F<br>
 				Brooklyn, NY 11206
 			</p>
 			<p>Phone: (586) 215-7625</p>
