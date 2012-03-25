@@ -1,30 +1,27 @@
 <div id="home" class="active section">
-    <div class="menu"><img src="images/home.png" alt="" /></div>
-    <div class="content">
-       <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, nisi a ornare</h1>
-       <div class="box">
-         <h3>Lorem ipsum dolor sit amet</h3>
-         <p>
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, nisi a ornare scelerisque, nibh tortor pretium tortor, sed tempus est ipsum sed arcu. Praesent a erat erat. Vestibulum ullamcorper.
-         </p>
-         
-         <h3>Lorem ipsum dolor sit amet</h3>
-         <p>
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, nisi a ornare scelerisque, nibh tortor pretium tortor.
-         </p>
-         
-         <h3>Lorem ipsum dolor sit amet</h3>
-         <p>
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, nisi a ornare scelerisque, nibh tortor pretium tortor.
-         </p>
-       </div>
-       <div class="box">
-         <h3>Lorem ipsum dolor sit amet</h3>
-         <p>
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, nisi a ornare scelerisque, nibh tortor pretium tortor, sed tempus est ipsum sed arcu. Praesent a erat erat. Vestibulum ullamcorper ipsum vel magna <a href="portfolio.html" rel="portfolio" class="toSection">view our portfolio</a>
-         </p>
-         
-         <img src="images/project.jpg" alt="" />
-       </div>
-    </div>
- </div>
+	<div class="menu"><img src="images/home.png" alt="" /></div>
+	<div class="content">
+		<h1>Hi, I'm John Lattin!</h1>
+		<div class="box">
+			<h3>Title 1</h3>
+			<p>
+				Sentence 1
+			</p>
+
+			<h3>Title 2</h3>
+			<p>
+				Sentence 2
+			</p>
+
+			<h3>Title 3</h3>
+			<p>
+				Sentence 3
+			</p>
+		</div>
+		<div class="box">
+			<h3>This is me</h3>
+
+			<img src="images/me.jpg" alt="" />
+		</div>
+	</div>
+</div>
