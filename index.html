@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>John Lattin</title>
+	<link rel="stylesheet/less" type="text/css" href="./css/bootstrap/bootstrap.less">
+	<style>
+			body {
+				padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+			}
+	</style>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet/less" type="text/css" href="./css/main.less">
+	<script type="text/javascript" src="./js/less.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+</head>
+<body ng-controller="johnlattin">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#">John Lattin</a>
+						<ul class="nav">
+							<li ng-class="{active: showAbout}"><a href="#about">About Me</a></li>
+							<li class="projects dropdown" ng-class="{active: showProject}">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									Projects
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li ng-repeat="project in projects">
+										<a href="{{project.href}}">{{project.name}}</a>
+									</li>
+								</ul>
+							</li>
+							<li ng-class="{active: showResume}"><a href="#resume">Resume</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="main-left">
+				<div ng-show="showAbout">
+					<h2>About Me</h2>
+					<p>
+						Hi and welcome to my site. I, as you may know, am John Lattin. I started programming at the age of 16 and it has grown to be my favorite hobby.
+					</p>
+
+					<h2>What do I program?</h2>
+					<p>
+						I vigorously trained myself in the art of programming games. What does this mean? I focused my college education, and a lot of my free time, on graphics frameworks such as OpenGL and our mobile friend OpenGL ES. 
+
+						I became very active in groups like Husky Game Development and organized several events and competitions; including Game Jams and BonzAI Brawl.
+					</p>
+
+					<h2>Can I do web development?</h2>
+					<p>
+						Yes, I know javascript, css, less and html; however web development is not my main goal.
+					</p>
+				</div>
+				<div ng-show="showEmptyProject">
+					Project not found
+				</div>
+				<div ng-show="showResume">
+					<iframe style="border:1px solid #666CCC" title="John Lattin's Resume" src="jlresume.pdf" frameborder="1" scrolling="auto" height="900" width="700px" ></iframe>
+				</div>
+				<div ng-show="showProject" class="project">
+					<a href="{{project.link}}">
+						<h2>{{project.name}}</h2>
+						<h5>{{project.link}}</h5>
+					</a>
+					<div class="image-list">
+						<div ng-repeat="image in project.images" class="image-item">
+							<img src={{image}} class="image-preview"></img>
+							<img src={{image}} class="image"></img>
+						</div>
+					</div>
+					<div class="desc-list">
+						<p ng-repeat="desc in project.description">{{desc}}</p>
+					</div>
+					<div class="lang-list">
+						<a ng-repeat="lang in project.lang" class="lang-item" href="{{lang.url}}">{{lang.name}}</a>
+					</div>
+				</div>
+		</div>
+		<div class="main-right">
+			<img src="./img/me.jpg"></img>
+			<h2>Contact Info</h2>
+			<table>
+				<tr>
+					<td>Phone</td>
+					<td><a href="#">(586) 215-7625<a></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><a href="mailto:john@johnlattin.com" target="_blank">john@johnlattin.com</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./js/bootstrap/bootstrap-dropdown.js"></script>
+	<script type="text/javascript" src="./js/jquery.ba-hashchange.min.js"></script>
+	<script type="text/javascript" src="./js/projects.js"></script>
+	<script type="text/javascript" src="./js/base.js"></script>
+</body>
+</html>

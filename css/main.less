@@ -1,0 +1,93 @@
+@import "./bootstrap/mixins.less";
+
+td {
+	padding-right: 10px;
+}
+
+body > .container {
+	position: relative;
+}
+
+.main-left {
+	position: absolute;
+	left: 0px;
+	width: 700px;
+}
+
+.main-right {
+	position: absolute;
+	right: 0px;
+}
+
+.project {
+	& a {
+		text-decoration: none;
+
+		&:hover {
+			& h5 {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	& h5 {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	& .lang-list {
+		//background-color: #f0f0f0;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		& .lang-item {
+			color: #4a4a4a;
+			margin: 4px;
+			font-size: 10px;
+		}
+	}
+
+	& .desc-list {
+		min-height: 280px;
+		border-bottom: 1px solid #efefef;
+	}
+}
+
+.image-list {
+	//overflow: visible;
+	//overflow-x: scroll;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	& .image-item {
+		position: relative;
+		display: inline-block;
+
+		& .image-preview {
+			width: 100px;
+			height: 64px;
+
+			margin: 4px;
+
+			border: 1px solid #a0a0a0;
+		}
+
+		& .image {
+			position: absolute;
+			display: none;
+
+			border: 1px solid black;
+		}
+
+		&:hover {
+			& .image {
+				display: block;
+				left: -50px;
+				top: 64px;
+				z-index: 10;
+				max-width: none;
+				max-height: none;
+			}
+		}
+	}
+}
