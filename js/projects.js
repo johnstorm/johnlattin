@@ -21,6 +21,12 @@ jl.projects = {
 		name: 'libInk',
 		lang: ['C']
 	},
+	flyloop: {
+		category: 'work',
+		name: 'Flyloop: Butterfly Looping Fun',
+		link: 'http://www.flyloopgame.com/',
+		lang: ['Objective-C', 'C', 'C++']
+	},
 	dinorun: {
 		category: 'work',
 		name: 'Dino Run iOS',
