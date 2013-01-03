@@ -47,7 +47,7 @@ body > .container {
 	}
 
 	& .desc-list {
-		min-height: 280px;
+		//min-height: 280px;
 		border-bottom: 1px solid #efefef;
 	}
 }
@@ -90,4 +90,23 @@ body > .container {
 			}
 		}
 	}
+}
+
+iframe {
+	width: 850px;
+	height: 970px;
+	overflow: hidden;
+
+	@amount: 0.83;
+
+	-moz-transform: scale(@amount, @amount); 
+	-webkit-transform: scale(@amount, @amount); 
+	-o-transform: scale(@amount, @amount);
+	-ms-transform: scale(@amount, @amount);
+	transform: scale(@amount, @amount); 
+	-moz-transform-origin: top left;
+	-webkit-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	transform-origin: top left;
 }

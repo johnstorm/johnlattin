@@ -8,20 +8,25 @@ function johnlattin($scope) {
 	var toDashes = utils.toDashes;
 	var toName = utils.toName;
 	var toCamelCase = utils.toCamelCase;
+	var loadStringArray = utils.loadStringArray;
+
+	var lookupTable = {};
+	lookupTable['html'] = 'http://en.wikipedia.org/wiki/HTML';
+	lookupTable['javascript'] = 'http://en.wikipedia.org/wiki/Javascript';
+	lookupTable['spinejs'] = 'http://spinejs.com/';
+	lookupTable['jquery'] = 'http://jquery.com/';
+	lookupTable['angularjs'] = 'http://angularjs.org/';
+	lookupTable['less'] = 'http://lesscss.org/';
+	lookupTable['handlebarsjs'] = 'http://handlebarsjs.com/';
+	lookupTable['objective-c'] = 'http://en.wikipedia.org/wiki/Objective-C';
+	lookupTable['c'] = 'http://en.wikipedia.org/wiki/C_(programming_language)';
+	lookupTable['c++'] = 'http://en.wikipedia.org/wiki/C%2B%2B';
+	lookupTable['opengl es 11'] = 'http://www.khronos.org/opengles/sdk/1.1/docs/man/';
 
 	var lookupURL = function(place) {
 		place = place.toLowerCase().replace(/\./g, '');
-		console.log("place = " + place);
-		switch (place) {
-			case 'html': return 'http://en.wikipedia.org/wiki/HTML';
-			case 'javascript': return 'http://en.wikipedia.org/wiki/Javascript';
-			case 'spinejs': return 'http://spinejs.com/';
-			case 'jquery': return 'http://jquery.com/';
-			case 'angularjs': return 'http://angularjs.org/';
-			case 'less': return 'http://lesscss.org/';
-			case 'handlebarsjs': return 'http://handlebarsjs.com/';
-		}
-		return '';
+		place = lookupTable[place];
+		return place ? place : '';
 	};
 
 	var projs = jl.projects;
@@ -39,24 +44,30 @@ function johnlattin($scope) {
 			val.lang = langList;
 		}
 
+		val.description = loadStringArray('./txt/' + key.toLowerCase() + '.txt');
+
 		projects[index++] = $.extend({
 			href: '#' + toDashes(key),
 			name: toName(key)
 		}, val);
 	});
-	projects.sort(function(a, b) {
+
+	/*projects.sort(function(a, b) {
 		if (a.href < b.href) return -1;
 		if (b.href < a.href) return 1;
 		return 0;
-	});
+	});*/
+
 	$scope.projects = projects;
+	console.log("projects = ", $.extend({}, projects));
 
 	var onHashChange = function() {
 		var hash = location.hash;
 		if (hash) hash = toCamelCase(hash.substring(1));
 		
+		console.log("[" + hash + "] projs = ", projs);
 		$scope.project = projs[hash];
-		console.log("hash changed to " + hash);
+		console.log("hash changed to " + hash, $scope.project);
 
 		var showProject = hash && hash !== 'about' && hash !== 'resume';
 		$scope.showAbout = hash === 'about' || !hash;
@@ -101,5 +112,30 @@ jl.utils = {
 			value[index] = value[index].substring(0, 1).toUpperCase() + value[index].substring(1);
 		}
 		return value.join(' ');
+	},
+	loadStringArray: function (file) {
+		var array = [];
+		$.ajax({
+			url: file,
+			type: "GET",
+			dataType: "text",
+			async: false,
+			cache: true,
+			success: function (data) {
+				var derterm = 'now_|_later';
+				data = data.replace(/\r\n|\r|\n/g, derterm).split(derterm);
+				for (var index = 0, count = data.length, val = ""; index < count; ++index) {
+					val = data[index];
+					if (val) {
+						array.push(val);
+					}
+				}
+			},
+			error: function (xhr, status, exception) {
+				throw new Error("File '" + text + "' was not found. Status: '" + status + "', exception: '" + exception + "'");
+			}
+		});
+
+		return array;
 	}
 };

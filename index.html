@@ -66,7 +66,9 @@
 					Project not found
 				</div>
 				<div ng-show="showResume">
-					<iframe style="border:1px solid #666CCC" title="John Lattin's Resume" src="jlresume.pdf" frameborder="1" scrolling="auto" height="900" width="700px" ></iframe>
+					<iframe title="John Lattin's Resume" src="resume.html" frameborder="0" scrolling="no"></iframe>
+					<!--iframe title="John Lattin's Resume" src="jlresume.pdf" frameborder="1" scrolling="auto" height="900" width="700px" ></iframe-->
+					<!--iframe src="https://docs.google.com/open?id=0B8DL4wrxZzZuam9nMmJOTmJpZFE" width="700" height="900"></iframe-->
 				</div>
 				<div ng-show="showProject" class="project">
 					<a href="{{project.link}}">
@@ -75,8 +77,8 @@
 					</a>
 					<div class="image-list">
 						<div ng-repeat="image in project.images" class="image-item">
-							<img src={{image}} class="image-preview"></img>
-							<img src={{image}} class="image"></img>
+							<a href="{{image}}" target="_blank"><img src="{{image}}" class="image-preview"></img></a>
+							<img src="{{image}}" class="image"></img>
 						</div>
 					</div>
 					<div class="desc-list">
