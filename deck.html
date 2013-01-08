@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>John Lattin</title>
+	<link rel="stylesheet/less" type="text/css" href="./css/bootstrap/bootstrap.less">
+	<style>
+			body {
+				padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+			}
+	</style>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet/less" type="text/css" href="./css/deck.less">
+	<script type="text/javascript" src="./js/less.js"></script>
+</head>
+<body>
+	<div class="container">
+		<form action="http://basicer.com/apps/deckpdf.php" method="POST" target="tacos">
+		<div class="row">
+			
+		<div class="span5">
+			
+			<textarea name="cards" autocomplete="off">
+1 Ancestral Recall
+1x Black Lotus
+Mox Emerald
+
+1 Mox Jet
+1 Mox Pearl
+1 Mox Ruby
+1 Mox Sapphire
+1 Timetwister
+1 Time Walk
+1 Bazaar of Baghdad
+1 Mishra's Workshop
+1 Library of Alexandria
+4 Dark Ritual
+1 Mana Crypt
+1 Mana Vault
+			</textarea>
+		</div>
+
+		<div class="span2" style="color:white;"><input type="submit" class="btn" value="&rarr;"></input></div>
+		<!--div class="span1" style="color:white;"><div style="position: relative; top: 220px;">ARROW</div></div-->
+		<div class="span5"><iframe name="tacos"></iframe></div>
+		</div>
+		</form>
+	</div>
+</body>
+</html>
